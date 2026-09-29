@@ -1,0 +1,166 @@
+/* Global stylesheet and color theme configuration for Escape in Yoga */
+
+@import "tailwindcss";
+
+@theme {
+  --color-sage: #6B8F71;
+  --color-forest: #2F4A3A;
+  --color-cream: #FAF7F2;
+  --color-terracotta: #D98B5F;
+  --color-sand: #E8E1D6;
+  --color-charcoal: #2B2B2B;
+  --color-warmgray: #7A7A72;
+
+  --font-body: var(--font-dm-sans);
+  --font-heading: var(--font-playfair);
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+  font-family: var(--font-dm-sans), sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-playfair), serif;
+}
+
+/* Custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #d1c7b7;
+  border-radius: 9999px;
+}
+
+/* =======================================================
+   DARK MODE OVERRIDES (Applied when .dark class is on html)
+   ======================================================= */
+
+.dark body {
+  background-color: #16201B !important;
+  color: #EDE8DF !important;
+}
+
+/* Background overrides */
+.dark .bg-cream,
+.dark [class*="bg-cream"] {
+  background-color: #16201B !important;
+}
+
+.dark .bg-white,
+.dark [class*="bg-white"] {
+  background-color: #1F2B25 !important;
+}
+
+/* Sidebar dark background */
+.dark aside.bg-forest {
+  background-color: #1B2C22 !important;
+  border-right: 1px solid #34443B !important;
+}
+
+/* Topbar in dark mode */
+.dark header.bg-white {
+  background-color: #1B2C22 !important;
+  border-color: #34443B !important;
+}
+
+/* Text color overrides */
+.dark .text-charcoal,
+.dark strong.text-charcoal,
+.dark span.text-charcoal,
+.dark p.text-charcoal,
+.dark h1.text-charcoal,
+.dark h2.text-charcoal,
+.dark h3.text-charcoal,
+.dark h4.text-charcoal {
+  color: #EDE8DF !important;
+}
+
+.dark .text-warmgray {
+  color: #A8A69C !important;
+}
+
+.dark .text-forest {
+  color: #A9CDB0 !important;
+}
+
+/* Border overrides */
+.dark .border-sand,
+.dark [class*="border-sand"] {
+  border-color: #34443B !important;
+}
+
+.dark .divide-sand > :not([hidden]) ~ :not([hidden]),
+.dark [class*="divide-sand"] > :not([hidden]) ~ :not([hidden]) {
+  border-color: #34443B !important;
+}
+
+/* Form inputs, selects, textareas */
+.dark input:not([type="checkbox"]):not([type="radio"]),
+.dark select,
+.dark textarea {
+  background-color: #16201B !important;
+  color: #EDE8DF !important;
+  border-color: #34443B !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #7D8A80 !important;
+}
+
+.dark select option {
+  background-color: #1F2B25;
+  color: #EDE8DF;
+}
+
+/* Hover background states */
+.dark .hover\:bg-cream:hover,
+.dark [class*="hover:bg-cream"]:hover,
+.dark [class*="hover:bg-sand"]:hover {
+  background-color: #26332C !important;
+}
+
+.dark table tr:hover {
+  background-color: #26332C !important;
+}
+
+.dark table thead tr.bg-cream,
+.dark table thead tr {
+  background-color: #1A2720 !important;
+}
+
+.dark table thead th {
+  color: #A8A69C !important;
+}
+
+/* Custom scrollbar in dark mode */
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #34443B;
+}
+
+/* Recharts Dark Mode Overrides */
+.dark .recharts-text {
+  fill: #A8A69C !important;
+}
+
+.dark .recharts-cartesian-grid line {
+  stroke: #34443B !important;
+}
+
+.dark .recharts-default-tooltip {
+  background-color: #1F2B25 !important;
+  border-color: #34443B !important;
+  color: #EDE8DF !important;
+}
+
+.dark .recharts-tooltip-item {
+  color: #EDE8DF !important;
+}
